@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 300px;
+    }
+
+    .imgBox {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding: 0;
+      padding-bottom: 75%;
+    }
+
+    .box img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    h2 {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="imgBox">
+      <img src="./imgs/dog.png" alt="">
+    </div>
+    <h2>我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题</h2>
+  </div>
+</body>
+
+</html>

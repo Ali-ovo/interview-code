@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container{
+      height: 300px;
+    }
+
+    .left{
+      width: 150px;
+      float: left;
+      background-color: red;
+    }
+
+    .right {
+      background-color: skyblue;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">新开</div>
+    <div class="right">跳转</div>
+  </div>
+
+
+
+  <script>
+    var left = document.querySelector('.left')
+    var right = document.querySelector('.right')
+
+
+    left.addEventListener('click', () => {
+      window.open('https://www.baidu.com')
+      // location.href = 'https://www.baidu.com'
+    })
+    right.addEventListener('click', () => {
+      // window.open('https://www.baidu.com')
+      location.href = 'https://www.baidu.com'
+    })
+
+  </script>
+</body>
+
+</html>

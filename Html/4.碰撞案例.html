@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .big {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .x {
+            width: 100px;
+            height: 100px;
+            background-color: #0f0;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+</head>
+
+<body scroll="no">
+    <div class="big"></div>
+    <div class="x"></div>
+
+
+
+    <script>
+        jQuery(document).scrollTop(0);
+        var bigLeft = $(".big").offset().left;
+        var bigTop = $(".big").offset().top;
+
+        var bigWidth = $(".big").width();
+        var bigHeight = $(".big").height();
+
+
+
+        var xWidth = $(".x").width();
+        var xHeight = $(".x").height();
+
+
+
+
+        $(".x").mousedown(function (event) {
+
+            // 获取移动块在浏览器距离左边的距离
+            var xLeft = $('.x').offset().left;
+            var xTop = $('.x').offset().top;
+
+
+            // 获取移动块在浏览器距离左边的距离
+            var xX = event.pageX - xLeft;
+            var yY = event.pageY - xTop;
+
+            // 鼠标在页面滚动的距离
+            /*         var xX = event.pageX;
+                    var yY = event.pageY; */
+
+            $(document).mousemove(function (e) {
+
+                // 获取移动块在浏览器距离左边的距离
+                var newxLeft = $('.x').offset().left;
+                var newxTop = $('.x').offset().top;
+
+
+                $(".x").css({
+                    left: e.pageX - xX + 'px',
+                    top: e.pageY - yY + 'px',
+                });
+
+
+                if (newxLeft < bigLeft - xWidth || newxLeft > bigLeft + bigWidth || newxTop < bigTop - xHeight || newxTop > bigTop + bigHeight) {
+                    $(".big").css("background", "skyblue")
+                } else {
+                    $(".big").css("background", "red")
+                }
+            })
+        })
+
+        $(".x").mouseup(function () {
+            $(document).off("mousemove");
+        })
+    </script>
+
+
+</body>
+
+
+</html>
