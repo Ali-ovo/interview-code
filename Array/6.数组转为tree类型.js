@@ -22,7 +22,7 @@
         return parentId === undefined ? item.parent === -1 : item.parent === parentId
       })
 
-      console.log(filterArr);
+      // console.log(filterArr);
 
       filterArr.map(item => {
         item.childNode = arrToTree(arr, item.id)
@@ -34,4 +34,4 @@
 
     let tree = arrToTree(arr)
 
-    // console.log(tree);
+    console.log(tree);
