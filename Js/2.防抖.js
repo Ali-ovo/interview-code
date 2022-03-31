@@ -4,7 +4,7 @@ function debounce(fn) {
   return function () {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-      fn.apply(this);
+      fn.apply(this, arguments);
     }, 500);
   };
 }

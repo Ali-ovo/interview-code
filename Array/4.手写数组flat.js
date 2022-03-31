@@ -7,9 +7,9 @@
         // 当原数组内存在数组并且层级dep大于时递归
         if (Array.isArray(item) && dep > 0) {
           // 层级递减
-          dep--
+          // dep--
           // 使用concat链接数组
-          result = result.concat(flat(item, dep))
+          result = result.concat(flat(item, dep - 1))
         } else {
           result.push(item)
         }

@@ -55,4 +55,5 @@
      *  Reflect.ownKeys 可以拿到Symbol或字符串 也不管是否可枚举.
      *  
      */
-    // console.log(Reflect.ownKeys(obj));
+    console.log(Reflect.ownKeys(obj));
+    
