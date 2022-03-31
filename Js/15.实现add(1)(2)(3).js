@@ -27,5 +27,4 @@
 
 
     const num = add(1)(2)(3)(4)(20)
-    //  alert(num)
-    console.log(+num);
+     alert(num)
