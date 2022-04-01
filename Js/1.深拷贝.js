@@ -54,8 +54,7 @@ function deepClone2(obj, wMap = new WeakMap()) {
   }
 }
 
-newObj = deepClone2(obj);
-
-newObj.color.push("123123123");
-console.log("obj", obj);
-console.log("newObj", newObj);
+// newObj = deepClone2(obj);
+// newObj.color.push("123123123");
+// console.log("obj", obj);
+// console.log("newObj", newObj);
