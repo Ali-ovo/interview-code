@@ -16,6 +16,7 @@
   }
   window.addEventListener("resize", throttle(sayHi)); */
 
+
 // 装逼写法
 function throttle(fn) {
   let canRun = null; // 通过闭包保存一个标记
